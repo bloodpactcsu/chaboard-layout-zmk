@@ -1,0 +1,98 @@
+/*
+ * Shared behaviours: home-row mods, Graphite shift pairs, smart shift.
+ *
+ * REQUIRES the including board keymap to #define KEYS_L, KEYS_R and THUMBS
+ * (key positions) BEFORE including this file — those differ per board.
+ */
+
+&sk {
+    release-after-ms = <900>;
+    quick-release;
+};
+
+&caps_word {
+    continue-list = <UNDERSCORE MINUS BSPC>;
+};
+
+/*
+ * Stock &mt is flavor "hold-preferred", 200ms, with no require-prior-idle-ms,
+ * so it always waits for release and turns into a modifier the moment any
+ * other key is pressed. Give it the same timeless tuning as the home-row mods
+ * so Esc/Ctrl feels like the rest of the board.
+ */
+&mt {
+    flavor = "balanced";
+    tapping-term-ms = <280>;
+    quick-tap-ms = <175>;
+    require-prior-idle-ms = <150>;
+};
+
+/ {
+    behaviors {
+        /* timeless home-row mods (urob) */
+        hml: hrm_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;
+        };
+        hmr: hrm_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-on-release;
+        };
+
+        /* Graphite canonical shift pairs */
+        gqt: quote_under {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp SQT>, <&kp UNDER>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        gcm: comma_qmark {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp QMARK>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        gmn: minus_dquote {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp DQT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        gsl: slash_lt {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp FSLH>, <&kp LT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        /* tap: sticky shift | shift+tap: caps word */
+        smart_shift: smart_shift {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&sk LSHFT>, <&caps_word>;
+            mods = <(MOD_LSFT)>;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        sys_layer {
+            if-layers = <EXT NUM>;
+            then-layer = <SYS>;
+        };
+    };
+};

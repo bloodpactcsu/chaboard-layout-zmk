@@ -1,0 +1,224 @@
+layout: {zmk_keyboard: corne}
+layers:
+  Graphite:
+  - ↹
+  - B
+  - L
+  - D
+  - W
+  - Z
+  - {t: '''', s: _}
+  - F
+  - O
+  - U
+  - J
+  - ;
+  - {t: Esc, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: N, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: R, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: T, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
+  - G
+  - Y
+  - {t: H, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: A, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: E, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: I, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: ',', s: '?'}
+  - $$mdi:apple-keyboard-shift$$
+  - Q
+  - X
+  - M
+  - C
+  - V
+  - K
+  - P
+  - .
+  - {t: '-', s: '"'}
+  - {t: /, s: <}
+  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:apple-keyboard-command$$
+  - {t: ↹, h: Num}
+  - {t: ␣, h: Extend}
+  - {t: ⏎, h: Num}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: sticky, s: Caps Word}
+  - $$mdi:backspace-outline$$
+  QWERTY:
+  - ↹
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - '-'
+  - $$mdi:apple-keyboard-control$$
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - ''''
+  - $$mdi:apple-keyboard-shift$$
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-control$$
+  - ␣
+  - {t: ⏎, h: Extend}
+  - $$mdi:backspace-outline$$
+  - {t: ⌦, h: Num}
+  Extend:
+  - {t: ▽, type: trans}
+  - '!'
+  - '['
+  - ']'
+  - <
+  - '>'
+  - Page Up
+  - Home
+  - ↑
+  - End
+  - Insert
+  - ⌦
+  - {t: ▽, type: trans}
+  - '#'
+  - '{'
+  - '}'
+  - (
+  - )
+  - Page Down
+  - ←
+  - ↓
+  - →
+  - ⌦
+  - '`'
+  - {t: ▽, type: trans}
+  - '~'
+  - $
+  - '|'
+  - AMPS
+  - \
+  - '='
+  - _
+  - ''''
+  - '"'
+  - '`'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - ⏎
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Num:
+  - {t: ▽, type: trans}
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '7'
+  - '8'
+  - '9'
+  - {t: ▽, type: trans}
+  - Print Scrn
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '4'
+  - '5'
+  - '6'
+  - ⏯
+  - {t: ▽, type: trans}
+  - F11
+  - F12
+  - Print Scrn
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '0'
+  - '1'
+  - '2'
+  - '3'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Sys:
+  - Reset
+  - BT CLR
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Reset
+  - Reset
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Boot
+  - Reset
+  - {t: ▽, type: trans}
+  - BT 1
+  - BT 2
+  - BT 3
+  - BT 4
+  - BT 5
+  - Out USB
+  - Out BLE
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&studio_unlock'
+  - Boot
+  - BT CLR ALL
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&studio_unlock'
+  - '&studio_unlock'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - BT CLR ALL
+  - BT CLR
+  - '&studio_unlock'
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+combos:
+- p: [0, 11]
+  k: {t: QWERTY, h: toggle}
+  l: [Graphite]
+- p: [0, 11]
+  k: {t: Graphite, h: toggle}
+  l: [QWERTY]

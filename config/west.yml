@@ -1,0 +1,41 @@
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    # dongle_display
+    - name: englmaxi
+      url-base: https://github.com/englmaxi
+    # nice_oled - nice_epaper - dongle_display!view - oled Adapter
+    - name: mctechnology17
+      url-base: https://github.com/mctechnology17
+    # hammerbeam-slideshow (peripheral nice!view art)
+    - name: gpeye
+      url-base: https://github.com/GPeye
+  projects:
+    - name: zmk
+      remote: zmkfirmware
+      revision: v0.3.0
+      import: app/west.yml
+    # dongle_display
+    - name: zmk-dongle-display
+      remote: englmaxi
+      revision: v0.3
+    # nice_oled - nice_epaper
+    - name: zmk-nice-oled
+      remote: mctechnology17
+      revision: main
+    # dongle_display!view
+    - name: zmk-dongle-display-view
+      remote: mctechnology17
+      revision: main
+    # oled Adapter
+    - name: zmk-oled-adapter
+      remote: mctechnology17
+      revision: main
+    # hammerbeam-slideshow: provides the `nice_view_custom` shield.
+    # Only ONE module may provide that shield name at a time.
+    - name: hammerbeam-slideshow
+      remote: gpeye
+      revision: main
+  self:
+    path: config

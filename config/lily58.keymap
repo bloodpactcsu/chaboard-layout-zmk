@@ -1,0 +1,125 @@
+/*
+ * Silakka54 (wireless, Lily58 shield) — 58 positions, 54 physical.
+ * Layout lives in config/shared/core36.h and is shared with every other board.
+ * This file only supplies what sits AROUND the core: number row, outer pinky
+ * columns, and the dead inner positions.
+ *
+ * Position map (&none = 42, 43, 53, 54):
+ *   0  1  2  3  4  5                 6  7  8  9 10 11
+ *  12 13 14 15 16 17                18 19 20 21 22 23
+ *  24 25 26 27 28 29                30 31 32 33 34 35
+ *  36 37 38 39 40 41 [42]      [43] 44 45 46 47 48 49
+ *           50 51 52 [53]      [54] 55 56 57
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
+#include "shared/layers.h"
+
+#define KEYS_L 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41
+#define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 44 45 46 47 48 49
+#define THUMBS 50 51 52 55 56 57
+
+#include "shared/behaviors.dtsi"
+#include "shared/core36.h"
+
+/ {
+    macros {
+        hello_world: hello_world {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp H &kp E &kp L &kp L &kp O &kp SPACE
+                        &kp W &kp O &kp R &kp L &kp D>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        /* the two top corners — swaps base layout either way */
+        combo_to_qwerty {
+            timeout-ms = <75>;
+            key-positions = <0 11>;
+            bindings = <&to QWE>;
+            layers = <BASE>;
+        };
+        combo_to_graphite {
+            timeout-ms = <75>;
+            key-positions = <0 11>;
+            bindings = <&to BASE>;
+            layers = <QWE>;
+        };
+
+        combo_hello {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&hello_world>;
+            layers = <BASE>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        base_layer {
+            display-name = "Graphite";
+            bindings = <
+&kp ESC        &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                   &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp GRAVE
+&kp TAB        GR_L1                                                GR_R1                        &kp SEMI
+&mt LCTRL ESC  GR_L2                                                GR_R2                        &gcm
+&kp LSHFT      GR_L3                        &none          &none    GR_R3                        &kp RSHFT
+                                     GR_LT  &none          &none    GR_RT
+            >;
+        };
+
+        qwerty_layer {
+            display-name = "QWERTY";
+            bindings = <
+&mt GRAVE ESC  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                   &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp GRAVE
+&kp TAB        QW_L1                                                QW_R1                        &kp MINUS
+&kp LCTRL      QW_L2                                                QW_R2                        &kp SQT
+&kp LSHFT      QW_L3                        &none          &none    QW_R3                        &kp RSHFT
+                                     QW_LT  &none          &none    QW_RT
+            >;
+        };
+
+        ext_layer {
+            display-name = "Extend";
+            bindings = <
+&trans     &trans &trans &trans &trans &trans                        &trans &trans &trans &trans &trans &kp DEL
+&trans     EX_L1                                                     EX_R1                             &kp DEL
+&trans     EX_L2                                                     EX_R2                             &kp GRAVE
+&trans     EX_L3                            &none          &none     EX_R3                             &trans
+                                     EX_LT  &none          &none     EX_RT
+            >;
+        };
+
+        num_layer {
+            display-name = "Num";
+            bindings = <
+&trans     &kp F1 &kp F2 &kp F3 &kp F4 &kp F5                        &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
+&trans     NU_L1                                                     NU_R1                              &kp F12
+&kp PSCRN  NU_L2                                                     NU_R2                              &kp C_PP
+&trans     NU_L3                            &none          &none     NU_R3                              &trans
+                                     NU_LT  &none          &none     NU_RT
+            >;
+        };
+
+        sys_layer {
+            display-name = "Sys";
+            bindings = <
+&bootloader     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &out OUT_USB &out OUT_BLE &trans &trans &trans &bt BT_CLR_ALL
+&sys_reset      SY_L1                                                                 SY_R1                                   &sys_reset
+&trans          SY_L2                                                                 SY_R2                                   &trans
+&studio_unlock  SY_L3                                   &none          &none          SY_R3                                   &studio_unlock
+                                                 SY_LT  &none          &none          SY_RT
+            >;
+        };
+
+        extra_1 { status = "reserved"; };
+        extra_2 { status = "reserved"; };
+    };
+};
