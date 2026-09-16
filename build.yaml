@@ -1,0 +1,50 @@
+include:
+  # ── Silakka54 (Lily58 shield) + PandaKB dongle ──
+  #
+  # `snippet: studio-rpc-usb-uart` adds a USB CDC ACM serial interface next to
+  # the HID one, which is how ZMK Studio connects on Windows and macOS — their
+  # Studio builds do NOT support BLE (Linux web app / native apps only).
+  # The snippet also appends -DZMK_BEHAVIORS_KEEP_ALL itself, so no cmake-args.
+  #
+  # An earlier comment here blamed this snippet for the dongle not typing.
+  # That was wrong: the cause was a charge-only USB cable (15 Sept 2026).
+  - board: nice_nano_v2
+    shield: lily58_dongle_pro_micro dongle_display
+    snippet: studio-rpc-usb-uart
+    artifact-name: silakka54_dongle
+  # Both halves run the Hammerbeam slideshow. `nice_view_custom` comes from the
+  # hammerbeam-slideshow module; on a split peripheral it builds art.c +
+  # peripheral_status.c, which is the slideshow WITH battery and link status
+  # drawn over it. Revert a side to `nice_view` for the stock screen.
+  - board: nice_nano_v2
+    shield: lily58_left_peripheral nice_view_adapter nice_view_custom
+    artifact-name: silakka54_left
+  - board: nice_nano_v2
+    shield: lily58_right nice_view_adapter nice_view_custom
+    artifact-name: silakka54_right
+
+  # ── Corne (same layout core) ──
+  - board: nice_nano_v2
+    shield: corne_dongle_pro_micro dongle_display
+    artifact-name: corne_dongle
+  - board: nice_nano_v2
+    shield: corne_left_peripheral nice_view_adapter nice_view_custom
+    artifact-name: corne_left
+  - board: nice_nano_v2
+    shield: corne_right nice_view_adapter nice_view_custom
+    artifact-name: corne_right
+
+  - board: nice_nano_v2
+    shield: settings_reset
+
+  # ── OPTIONAL EXTRAS — uncomment one at a time, never both at once ──
+  #
+  # Animated half screens (nice-oled module). Left = smart battery,
+  # right = rotating gem. Rendered oddly on the nice!view when tried;
+  # VDB is pinned to 100 in config/lily58_{left_peripheral,right}.conf.
+  # - board: nice_nano_v2
+  #   shield: lily58_left_peripheral nice_view_adapter nice_epaper
+  #   artifact-name: silakka54_left_animated
+  # - board: nice_nano_v2
+  #   shield: lily58_right nice_view_adapter nice_epaper
+  #   artifact-name: silakka54_right_animated
