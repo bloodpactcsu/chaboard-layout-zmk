@@ -61,32 +61,24 @@
         /* filed */
         combo_main_pw {
             timeout-ms = <60>;
-            wait-ms = <5>;
-            tap-ms = <5>;
             key-positions = <10 11>;
             bindings = <&main_pw>;
             layers = <SYS>;
         };
         combo_console_pw {
             timeout-ms = <60>;
-            wait-ms = <5>;
-            tap-ms = <5>;
             key-positions = <10 11>;
             bindings = <&console_pw>;
             layers = <SYS>;
         };
         combo_sudo_pw {
             timeout-ms = <60>;
-            wait-ms = <5>;
-            tap-ms = <5>;
             key-positions = <10 11>;
             bindings = <&sudo_pw>;
             layers = <SYS>;
         };
         combo_admin_pw {
             timeout-ms = <60>;
-            wait-ms = <5>;
-            tap-ms = <5>;
             key-positions = <10 11>;
             bindings = <&admin_pw>;
             layers = <SYS>;
