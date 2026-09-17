@@ -26,14 +26,11 @@
 #include "shared/behaviors.dtsi"
 #include "shared/core36.h"
 
-<<<<<<< HEAD
 /* secret macros */
 #if __has_include("shared/secrets.dtsi")
 #include "secrets.dtsi"
 #endif
 
-=======
->>>>>>> fc439e443093d7ee04bbdd25837e1164003601af
 / {
     macros {
         hello_world: hello_world {
@@ -47,11 +44,7 @@
     combos {
         compatible = "zmk,combos";
 
-<<<<<<< HEAD
         /* the two top corners - swaps base layout either way */
-=======
-        /* the two top corners — swaps base layout either way */
->>>>>>> fc439e443093d7ee04bbdd25837e1164003601af
         combo_to_qwerty {
             timeout-ms = <75>;
             key-positions = <0 11>;
@@ -65,7 +58,6 @@
             layers = <QWE>;
         };
 
-<<<<<<< HEAD
         /* secrets */
         combo_main_pw {
             timeout-ms = <60>;
@@ -98,13 +90,6 @@
             key-positions = <10 11>;
             bindings = <&admin_pw>;
             layers = <SYS>;
-=======
-        combo_hello {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&hello_world>;
-            layers = <BASE>;
->>>>>>> fc439e443093d7ee04bbdd25837e1164003601af
         };
     };
 
@@ -125,17 +110,10 @@
         qwerty_layer {
             display-name = "QWERTY";
             bindings = <
-<<<<<<< HEAD
 &mt LGUI ESC   &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                   &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS
 &TAB           QW_L1                                                QW_R1                              &kp BSLH
 &kp LCTRL      QW_L2                                                QW_R2                              &kp APOS
 &kp LSHFT      QW_L3                        &none          &none    QW_R3                              &kp EQUAL
-=======
-&mt GRAVE ESC  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                   &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp GRAVE
-&kp TAB        QW_L1                                                QW_R1                        &kp MINUS
-&kp LCTRL      QW_L2                                                QW_R2                        &kp SQT
-&kp LSHFT      QW_L3                        &none          &none    QW_R3                        &kp RSHFT
->>>>>>> fc439e443093d7ee04bbdd25837e1164003601af
                                      QW_LT  &none          &none    QW_RT
             >;
         };
