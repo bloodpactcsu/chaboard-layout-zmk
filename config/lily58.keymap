@@ -100,7 +100,7 @@
             display-name = "QWERTY";
             bindings = <
 &mt LGUI ESC   &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                   &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS
-&TAB           QW_L1                                                QW_R1                              &kp BSLH
+&kp TAB        QW_L1                                                QW_R1                              &kp BSLH
 &kp LCTRL      QW_L2                                                QW_R2                              &kp APOS
 &kp LSHFT      QW_L3                        &none          &none    QW_R3                              &kp EQUAL
                                      QW_LT  &none          &none    QW_RT
