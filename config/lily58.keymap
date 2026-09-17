@@ -28,7 +28,7 @@
 
 /* secret macros */
 #if __has_include("shared/secrets.dtsi")
-#include "secrets.dtsi"
+#include "shared/secrets.dtsi"
 #endif
 
 / {
