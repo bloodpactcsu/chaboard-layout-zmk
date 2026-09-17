@@ -26,9 +26,9 @@
 #include "shared/behaviors.dtsi"
 #include "shared/core36.h"
 
-/* secret macros */
-#if __has_include("shared/secrets.dtsi")
-#include "shared/secrets.dtsi"
+/* macros */
+#if __has_include("shared/macros_combos.dtsi")
+#include "shared/macros_combos.dtsi"
 #endif
 
 / {
@@ -58,7 +58,7 @@
             layers = <QWE>;
         };
 
-        /* secrets */
+        /* filed */
         combo_main_pw {
             timeout-ms = <60>;
             wait-ms = <5>;
