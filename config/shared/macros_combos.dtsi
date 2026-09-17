@@ -8,7 +8,7 @@
             // types:  magicTheGathering17_
             bindings = <&kp M &kp A &kp J &kp I &kp C &kp LS(T) &kp H &kp E
                         &kp G &kp A &kp T &kp H &kp E &kp R &kp I &kp N &kp G
-                        &kp N1 &kp N7 UNDER>;
+                        &kp N1 &kp N7 &kp UNDER>;
         };
         console_pw: console_pw {
             compatible = "zmk,behavior-macro";
