@@ -84,5 +84,8 @@ __pycache__
 # Rust
 target/
 **/*.rs.bk
+<<<<<<< HEAD
 
 config/shared/secrets.dtsi
+=======
+>>>>>>> fc439e443093d7ee04bbdd25837e1164003601af
