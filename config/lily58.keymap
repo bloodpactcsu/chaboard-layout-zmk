@@ -26,6 +26,11 @@
 #include "shared/behaviors.dtsi"
 #include "shared/core36.h"
 
+/* secret macros */
+#if __has_include("shared/secrets.dtsi")
+#include "secrets.dtsi"
+#endif
+
 / {
     macros {
         hello_world: hello_world {
@@ -39,7 +44,7 @@
     combos {
         compatible = "zmk,combos";
 
-        /* the two top corners — swaps base layout either way */
+        /* the two top corners - swaps base layout either way */
         combo_to_qwerty {
             timeout-ms = <75>;
             key-positions = <0 11>;
@@ -53,11 +58,38 @@
             layers = <QWE>;
         };
 
-        combo_hello {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&hello_world>;
-            layers = <BASE>;
+        /* secrets */
+        combo_main_pw {
+            timeout-ms = <60>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            key-positions = <10 11>;
+            bindings = <&main_pw>;
+            layers = <SYS>;
+        };
+        combo_console_pw {
+            timeout-ms = <60>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            key-positions = <10 11>;
+            bindings = <&console_pw>;
+            layers = <SYS>;
+        };
+        combo_sudo_pw {
+            timeout-ms = <60>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            key-positions = <10 11>;
+            bindings = <&sudo_pw>;
+            layers = <SYS>;
+        };
+        combo_admin_pw {
+            timeout-ms = <60>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            key-positions = <10 11>;
+            bindings = <&admin_pw>;
+            layers = <SYS>;
         };
     };
 
@@ -78,10 +110,10 @@
         qwerty_layer {
             display-name = "QWERTY";
             bindings = <
-&mt GRAVE ESC  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                   &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp GRAVE
-&kp TAB        QW_L1                                                QW_R1                        &kp MINUS
-&kp LCTRL      QW_L2                                                QW_R2                        &kp SQT
-&kp LSHFT      QW_L3                        &none          &none    QW_R3                        &kp RSHFT
+&mt LGUI ESC   &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                   &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS
+&TAB           QW_L1                                                QW_R1                              &kp BSLH
+&kp LCTRL      QW_L2                                                QW_R2                              &kp APOS
+&kp LSHFT      QW_L3                        &none          &none    QW_R3                              &kp EQUAL
                                      QW_LT  &none          &none    QW_RT
             >;
         };

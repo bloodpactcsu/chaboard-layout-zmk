@@ -40,7 +40,7 @@
 #define QW_L3  &kp Z            &kp X            &kp C             &kp V             &kp B
 #define QW_R3  &kp N            &kp M            &kp COMMA         &kp DOT           &kp FSLH
 #define QW_LT  &kp LALT         &kp LCTRL        &kp SPACE
-#define QW_RT  &lt EXT RET      &kp BSPC         &lt NUM DEL
+#define QW_RT  &lt EXT RET      &lt NUM BSPC     &lt SYS DEL
 
 /* ── EXT: symbols left, navigation right ──────────────────────────────── */
 #define EX_L1  &kp EXCL         &kp LBKT         &kp RBKT          &kp LT            &kp GT
