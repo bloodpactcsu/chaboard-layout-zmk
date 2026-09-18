@@ -6,3 +6,5 @@
 #define EXT  2
 #define NUM  3
 #define SYS  4
+#define MACRO  5
+#define UTIL  6

@@ -25,17 +25,11 @@
 
 #include "shared/behaviors.dtsi"
 #include "shared/core36.h"
-
 #include "shared/macros_combos.dtsi"
 
 / {
     macros {
-        hello_world: hello_world {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp H &kp E &kp L &kp L &kp O &kp SPACE
-                        &kp W &kp O &kp R &kp L &kp D>;
-        };
+        
     };
 
     combos {
@@ -58,27 +52,39 @@
         /* macros_combos */
         combo_main_pw {
             timeout-ms = <60>;
-            key-positions = <10 11>;
+            key-positions = <1>;
             bindings = <&main_pw>;
-            layers = <SYS>;
+            layers = <MACRO>;
         };
         combo_console_pw {
             timeout-ms = <60>;
-            key-positions = <22 23>;
+            key-positions = <2>;
             bindings = <&console_pw>;
-            layers = <SYS>;
+            layers = <MACRO>;
         };
         combo_sudo_pw {
             timeout-ms = <60>;
-            key-positions = <34 35>;
+            key-positions = <3>;
             bindings = <&sudo_pw>;
-            layers = <SYS>;
+            layers = <MACRO>;
         };
         combo_admin_pw {
             timeout-ms = <60>;
-            key-positions = <48 49>;
+            key-positions = <4>;
             bindings = <&admin_pw>;
-            layers = <SYS>;
+            layers = <MACRO>;
+        };
+        combo_fms_login {
+            timeout-ms = <60>;
+            key-positions = <5>;
+            bindings = <&fms_login>;
+            layers = <MACRO>;
+        };
+        combo_cd_fix {
+            timeout-ms = <60>;
+            key-positions = <28>;
+            bindings = <&cd_fix>;
+            layers = <MACRO>;
         };
     };
 
@@ -140,7 +146,30 @@
             >;
         };
 
+        mac_layer {
+            display-name = "Macros";
+            bindings = <
+&none     &none &none &none &none &none                                               &none &none &none &none &none           &none
+&none     MA_L1                                                                       MA_R1                                   &sys_reset
+&none     MA_L2                                                                       MA_R2                                   &trans
+&none     MA_L3                                         &none          &none          MA_R3                                   &studio_unlock
+                                                 MA_LT  &none          &none          MA_RT
+            >;
+        };
+
         extra_1 { status = "reserved"; };
         extra_2 { status = "reserved"; };
     };
 };
+
+<!--
+        mac_layer {
+            display-name = "Macros";
+            bindings = <
+&none     &none &none &none &none &none                                               &none &none &none &none &none           &none
+&none     SY_L1                                                                       SY_R1                                   &sys_reset
+&none     SY_L2                                                                       SY_R2                                   &trans
+&none     SY_L3                                         &none          &none          SY_R3                                   &studio_unlock
+                                                 SY_LT  &none          &none          SY_RT
+            >;
+        };-->

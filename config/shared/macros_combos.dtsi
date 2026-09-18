@@ -34,6 +34,32 @@
             // types:  K4tp0ng
             bindings = <&kp LS(K) &kp N4 &kp T &kp P &kp N0 &kp N &kp G>;
         };
+
+       fms_login: fms_login {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings =
+                <&kp W &kp S &kp L &kp RET>,
+                <&macro_wait_time 300>,
+                <&kp S &kp S &kp H &kp SPACE &kp P>,
+                <&macro_wait_time 300>,
+                <&kp RET>,
+                <&macro_wait_time 30>,
+                <&kp C &kp D &kp SPACE &kp FSLH &kp RET>;
+        };
+
+        cd_fix: cd_fix {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings =
+                <&kp C &kp D &kp SPACE &kp F &kp I &kp X &kp FSLH &kp T &kp R &kp A &kp V &kp I &kp S &kp RET>,
+                <&macro_wait_time 300>,
+                <&kp L &kp S &kp SPACE &kp MINUS &kp O &kp RET>;
+        };
     };
 
     combos {

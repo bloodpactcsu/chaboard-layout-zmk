@@ -40,7 +40,7 @@
 #define QW_L3  &kp Z            &kp X            &kp C             &kp V             &kp B
 #define QW_R3  &kp N            &kp M            &kp COMMA         &kp DOT           &kp FSLH
 #define QW_LT  &kp LALT         &kp LCTRL        &kp SPACE
-#define QW_RT  &lt EXT RET      &lt NUM BSPC     &lt SYS DEL
+#define QW_RT  &lt EXT RET      &lt NUM BSPC     &lt MACRO DEL
 
 /* ── EXT: symbols left, navigation right ──────────────────────────────── */
 #define EX_L1  &kp EXCL         &kp LBKT         &kp RBKT          &kp LT            &kp GT
@@ -71,3 +71,25 @@
 #define SY_R3  &studio_unlock   &trans           &trans            &bt BT_CLR_ALL    &bt BT_CLR
 #define SY_LT  &trans           &trans           &trans
 #define SY_RT  &trans           &trans           &trans
+
+/* ── MACRO: reached by holding ??? ───────────────────────── */
+#define MA_L1  &trans           &trans           &trans            &trans            &trans
+#define MA_R1  &trans           &trans           &trans            &trans            &trans
+#define MA_L2  &trans           &trans           &trans            &trans            &trans
+#define MA_L2  &trans           &trans           &trans            &trans            &trans
+#define MA_R2  &trans           &trans           &trans            &trans            &trans
+#define MA_L3  &trans           &trans           &trans            &trans            &trans
+#define MA_R3  &trans           &trans           &trans            &trans            &trans
+#define MA_LT  &trans           &trans           &trans
+#define MA_RT  &trans           &trans           &trans
+
+/* ── UTIL: reached by holding ??? ───────────────────────── */
+#define UT_L1  &trans           &trans           &trans            &trans            &trans
+#define UT_R1  &trans           &trans           &trans            &trans            &trans
+#define UT_L2  &trans           &trans           &trans            &trans            &trans
+#define UT_L2  &trans           &trans           &trans            &trans            &trans
+#define UT_R2  &trans           &trans           &trans            &trans            &trans
+#define UT_L3  &trans           &trans           &trans            &trans            &trans
+#define UT_R3  &trans           &trans           &trans            &trans            &trans
+#define UT_LT  &trans           &trans           &trans
+#define UT_RT  &trans           &trans           &trans
