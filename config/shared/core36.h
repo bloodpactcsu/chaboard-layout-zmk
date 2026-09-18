@@ -40,7 +40,7 @@
 #define QW_L3  &kp Z            &kp X            &kp C             &kp V             &kp B
 #define QW_R3  &kp N            &kp M            &kp COMMA         &kp DOT           &kp FSLH
 #define QW_LT  &kp LALT         &kp LCTRL        &kp SPACE
-#define QW_RT  &lt EXT RET      &lt NUM BSPC     &lt MACRO DEL
+#define QW_RT  &tlt EXT RET     &tlt NUM BSPC    &tlt MACRO DEL
 
 /* ── EXT: symbols left, navigation right ──────────────────────────────── */
 #define EX_L1  &kp EXCL         &kp LBKT         &kp RBKT          &kp LT            &kp GT
@@ -54,9 +54,9 @@
 
 /* ── NUM: F-keys left, media right ────────────────────────────────────── */
 #define NU_L1  &kp F1           &kp F2           &kp F3            &kp F4            &kp F5
-#define NU_R1  &trans           &trans           &kp N7            &kp N8            &kp N9
+#define NU_R1  &kp KP_PLUS      &kp KP_MINUS     &kp N7            &kp N8            &kp N9
 #define NU_L2  &kp F6           &kp F7           &kp F8            &kp F9            &kp F10
-#define NU_R2  &trans           &trans           &kp N4            &kp N5            &kp N6
+#define NU_R2  &kp KP_DIVIDE    &kp KP_MULTIPLY  &kp N4            &kp N5            &kp N6
 #define NU_L3  &kp F11          &kp F12          &kp PSCRN         &trans            &trans
 #define NU_R3  &trans           &kp N0           &kp N1            &kp N2            &kp N3
 #define NU_LT  &trans           &trans           &trans
