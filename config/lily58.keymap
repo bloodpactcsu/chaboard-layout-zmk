@@ -162,7 +162,7 @@
     };
 };
 
-<!--
+/*
         mac_layer {
             display-name = "Macros";
             bindings = <
@@ -172,4 +172,5 @@
 &none     SY_L3                                         &none          &none          SY_R3                                   &studio_unlock
                                                  SY_LT  &none          &none          SY_RT
             >;
-        };-->
+        };
+*/
