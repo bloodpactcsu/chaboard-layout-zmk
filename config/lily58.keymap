@@ -82,7 +82,7 @@
         };
         combo_cd_fix {
             timeout-ms = <60>;
-            key-positions = <28>;
+            key-positions = <6>;
             bindings = <&cd_fix>;
             layers = <MACRO>;
         };
