@@ -9,8 +9,8 @@ manifest:
     - name: mctechnology17
       url-base: https://github.com/mctechnology17
     # hammerbeam-slideshow (peripheral nice!view art)
-    - name: gpeye
-      url-base: https://github.com/GPeye
+    # - name: gpeye
+    #   url-base: https://github.com/GPeye
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -34,8 +34,8 @@ manifest:
       revision: main
     # hammerbeam-slideshow: provides the `nice_view_custom` shield.
     # Only ONE module may provide that shield name at a time.
-    - name: hammerbeam-slideshow
-      remote: gpeye
-      revision: main
+    # - name: hammerbeam-slideshow
+    #   remote: gpeye
+    #   revision: main
   self:
     path: config
