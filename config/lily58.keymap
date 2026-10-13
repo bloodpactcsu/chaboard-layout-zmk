@@ -94,7 +94,7 @@
         base_layer {
             display-name = "Graphite";
             bindings = <
-&trans         &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                   &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp GRAVE
+&trans         &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                   &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &trans
 &kp TAB        GR_L1                                                GR_R1                        &kp SEMI
 &mt LGUI ESC   GR_L2                                                GR_R2                        &gcm
 &kp LSHFT      GR_L3                        &none          &none    GR_R3                        &kp RSHFT
@@ -105,7 +105,7 @@
         qwerty_layer {
             display-name = "QWERTY";
             bindings = <
-&trans         &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                   &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS
+&trans         &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                   &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &trans
 &kp TAB        QW_L1                                                QW_R1                              &kp BSLH
 &mt LGUI ESC   QW_L2                                                QW_R2                              &kp APOS
 &kp LSHFT      QW_L3                        &none          &none    QW_R3                              &kp EQUAL
@@ -119,7 +119,7 @@
 &trans     &trans &trans &trans &trans &trans                        &trans &trans &trans &trans &trans &kp DEL
 &trans     EX_L1                                                     EX_R1                             &kp DEL
 &trans     EX_L2                                                     EX_R2                             &kp GRAVE
-&trans     EX_L3                            &none          &none     EX_R3                             &trans
+&trans     EX_L3                            &none          &none     EX_R3                             &kp MINUS
                                      EX_LT  &none          &none     EX_RT
             >;
         };
