@@ -85,45 +85,25 @@ text.footer {
 }
 
 /* styling for combo tap, and key non-tap label text */
-<<<<<<< HEAD
-text.combo, text.hold, text.shifted, text.left, text.right {
-    font-size: 11px;
-}
-
-text.hold {
-=======
 text.combo, text.hold, text.shifted, text.left, text.right, text.tl, text.tr, text.bl, text.br {
     font-size: 11px;
 }
 
 text.hold, text.bl, text.br {
->>>>>>> fc439e443093d7ee04bbdd25837e1164003601af
     text-anchor: middle;
     dominant-baseline: auto;
 }
 
-<<<<<<< HEAD
-text.shifted {
-=======
 text.shifted, text.tl, text.tr {
->>>>>>> fc439e443093d7ee04bbdd25837e1164003601af
     text-anchor: middle;
     dominant-baseline: hanging;
 }
 
-<<<<<<< HEAD
-text.left {
-    text-anchor: start;
-}
-
-text.right {
-=======
 text.left, text.tl, text.bl {
     text-anchor: start;
 }
 
 text.right, text.tr, text.br {
->>>>>>> fc439e443093d7ee04bbdd25837e1164003601af
     text-anchor: end;
 }
 

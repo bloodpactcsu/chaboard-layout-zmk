@@ -1,88 +1,7 @@
-<<<<<<< HEAD
-layout: {qmk_keyboard: lily58_rotated}
-layers:
-  Bas: [Esc, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '`', ↹, Q, W, E, R, T, Y, U, I, O, P, '-', '$$mdi:apple-keyboard-control$$', A, S, D, F, G, H, J, K,
-    L, ;, '''', '$$mdi:apple-keyboard-shift$$', Z, X, C, V, B, '[', ']', N, M, ',', ., /, '$$mdi:apple-keyboard-shift$$', '$$mdi:apple-keyboard-option$$', '$$mdi:apple-keyboard-command$$',
-    Low, ␣, ⏎, Rai, '$$mdi:backspace-outline$$', '$$mdi:apple-keyboard-command$$']
-  Low:
-  - BT CLR
-  - BT 1
-  - BT 2
-  - BT 3
-  - BT 4
-  - BT 5
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - F11
-  - F12
-  - '`'
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
-  - ^
-  - AMPS
-  - KP MULTIPLY
-  - (
-  - )
-  - '~'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '-'
-  - KP PLUS
-  - '{'
-  - '}'
-  - '|'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  Rai:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '`'
-=======
 layout: {zmk_keyboard: lily58}
 layers:
   Graphite:
-  - Esc
->>>>>>> fc439e443093d7ee04bbdd25837e1164003601af
+  - {t: ▽, type: trans}
   - '1'
   - '2'
   - '3'
@@ -93,9 +12,7 @@ layers:
   - '8'
   - '9'
   - '0'
-<<<<<<< HEAD
-=======
-  - '`'
+  - {t: ▽, type: trans}
   - ↹
   - B
   - L
@@ -108,7 +25,7 @@ layers:
   - U
   - J
   - ;
-  - {t: Esc, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: Esc, h: '$$mdi:apple-keyboard-command$$'}
   - {t: N, h: '$$mdi:apple-keyboard-command$$'}
   - {t: R, h: '$$mdi:apple-keyboard-option$$'}
   - {t: T, h: '$$mdi:apple-keyboard-control$$'}
@@ -134,16 +51,16 @@ layers:
   - {t: '-', s: '"'}
   - {t: /, s: <}
   - $$mdi:apple-keyboard-shift$$
-  - $$mdi:apple-keyboard-command$$
-  - {t: ↹, h: Num}
+  - $$mdi:apple-keyboard-option$$
+  - {t: ↹, h: '3'}
   - {t: ␣, h: Extend}
   - ''
   - ''
-  - {t: ⏎, h: Num}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: sticky, s: Caps Word}
-  - $$mdi:backspace-outline$$
+  - {t: ⏎, h: Extend}
+  - {t: '$$mdi:backspace-outline$$', h: Num}
+  - {t: ⌦, h: Macros}
   QWERTY:
-  - {t: Esc, h: '`'}
+  - {t: ▽, type: trans}
   - '1'
   - '2'
   - '3'
@@ -154,7 +71,7 @@ layers:
   - '8'
   - '9'
   - '0'
-  - '`'
+  - {t: ▽, type: trans}
   - ↹
   - Q
   - W
@@ -166,8 +83,8 @@ layers:
   - I
   - O
   - P
-  - '-'
-  - $$mdi:apple-keyboard-control$$
+  - \
+  - {t: Esc, h: '$$mdi:apple-keyboard-command$$'}
   - A
   - S
   - D
@@ -192,15 +109,15 @@ layers:
   - ','
   - .
   - /
-  - $$mdi:apple-keyboard-shift$$
+  - '='
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
   - ␣
   - ''
   - ''
   - {t: ⏎, h: Extend}
-  - $$mdi:backspace-outline$$
-  - {t: ⌦, h: Num}
+  - {t: '$$mdi:backspace-outline$$', h: Num}
+  - {t: ⌦, h: Macros}
   Extend:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -251,7 +168,7 @@ layers:
   - ''''
   - '"'
   - '`'
-  - {t: ▽, type: trans}
+  - '-'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
@@ -261,7 +178,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   Num:
->>>>>>> fc439e443093d7ee04bbdd25837e1164003601af
   - {t: ▽, type: trans}
   - F1
   - F2
@@ -269,42 +185,19 @@ layers:
   - F4
   - F5
   - F6
-<<<<<<< HEAD
-  - {t: ▽, type: trans}
-  - ←
-  - ↓
-  - ↑
-  - →
-  - {t: ▽, type: trans}
-=======
->>>>>>> fc439e443093d7ee04bbdd25837e1164003601af
   - F7
   - F8
   - F9
   - F10
   - F11
-<<<<<<< HEAD
-  - F12
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - KP PLUS
-  - '-'
-  - '='
-  - '['
-  - ']'
-  - \
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-=======
   - {t: ▽, type: trans}
   - F1
   - F2
   - F3
   - F4
   - F5
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - KP PLUS
+  - KP MINUS
   - '7'
   - '8'
   - '9'
@@ -315,8 +208,8 @@ layers:
   - F8
   - F9
   - F10
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - KP DIVIDE
+  - KP MULTIPLY
   - '4'
   - '5'
   - '6'
@@ -334,18 +227,14 @@ layers:
   - '1'
   - '2'
   - '3'
->>>>>>> fc439e443093d7ee04bbdd25837e1164003601af
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
   - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-<<<<<<< HEAD
-  - {t: ▽, type: trans}
-=======
-  - ''
-  - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   Sys:
   - Boot
@@ -399,13 +288,72 @@ layers:
   - BT CLR
   - '&studio_unlock'
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
+  - ''
+  - ''
+  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  Macros:
+  - ''
+  - '&main_pw'
+  - '&console_pw'
+  - '&sudo_pw'
+  - '&admin_pw'
+  - '&fms_login'
+  - '&cd_fix'
+  - ''
+  - ''
+  - ''
+  - ''
   - ''
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Reset
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&studio_unlock'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
 combos:
 - p: [0, 11]
   k: {t: QWERTY, h: toggle}
@@ -413,7 +361,3 @@ combos:
 - p: [0, 11]
   k: {t: Graphite, h: toggle}
   l: [QWERTY]
-- p: [0, 1]
-  k: '&hello_world'
-  l: [Graphite]
->>>>>>> fc439e443093d7ee04bbdd25837e1164003601af
