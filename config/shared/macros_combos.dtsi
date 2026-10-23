@@ -1,35 +1,12 @@
 /*
- * PLACEHOLDER. This file is in git, so it must never hold real passwords.
- * The real macros live in the MACROS_COMBOS_DTSI Actions secret; the build
- * writes that over this file before compiling.
- *
- * Same labels as the real file, so every keymap still builds without the
- * secret (pull requests, keymap-drawer). These all type nothing.
+ * The four password macros are NOT here. They live in secrets.dtsi, which is
+ * a placeholder in git and gets overwritten from the MACROS_COMBOS_DTSI
+ * Actions secret at build time.
  */
+#include "secrets.dtsi"
+
 / {
     macros {
-        main_pw: main_pw {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none>;
-        };
-        console_pw: console_pw {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none>;
-        };
-        sudo_pw: sudo_pw {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none>;
-        };
-        admin_pw: admin_pw {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none>;
-        };
-
-        /* non-secrets */
         fms_login: fms_login {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
