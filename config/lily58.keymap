@@ -95,9 +95,9 @@
             display-name = "Graphite";
             bindings = <
 &trans         &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                   &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &trans
-&kp TAB        GR_L1                                                GR_R1                        &kp SEMI
+&lt SYS TAB    GR_L1                                                GR_R1                        &kp SEMI
 &mt LGUI ESC   GR_L2                                                GR_R2                        &gcm
-&kp LSHFT      GR_L3                        &none          &none    GR_R3                        &kp RSHFT
+&smart_shift   GR_L3                        &none          &none    GR_R3                        &kp RSHFT
                                      GR_LT  &none          &none    GR_RT
             >;
         };
@@ -108,7 +108,7 @@
 &trans         &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                   &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &trans
 &kp TAB        QW_L1                                                QW_R1                              &kp BSLH
 &mt LGUI ESC   QW_L2                                                QW_R2                              &kp APOS
-&kp LSHFT      QW_L3                        &none          &none    QW_R3                              &kp EQUAL
+&smart_shift   QW_L3                        &none          &none    QW_R3                              &kp EQUAL
                                      QW_LT  &none          &none    QW_RT
             >;
         };

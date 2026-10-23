@@ -1,13 +1,14 @@
 /*
- * Corne (3x6+3, 42 keys) — same layout core as the Silakka54.
- * Nothing here defines the layout; it only frames the shared core with the
- * outer pinky columns. Drop-in for the DIY wireless Corne build.
+ * Corne (6 columns, 3 thumbs per side) — 42 positions.
+ * Layout lives in config/shared/core36.h and is shared with every other board.
+ * This file only supplies what sits AROUND the core: outer pinky columns.
+ * No number row on this board, so that row from the other boards is dropped.
  *
  * Position map:
- *   0  1  2  3  4  5      6  7  8  9 10 11
- *  12 13 14 15 16 17     18 19 20 21 22 23
- *  24 25 26 27 28 29     30 31 32 33 34 35
- *           36 37 38     39 40 41
+ *   0  1  2  3  4  5                 6  7  8  9 10 11
+ *  12 13 14 15 16 17                18 19 20 21 22 23
+ *  24 25 26 27 28 29                30 31 32 33 34 35
+ *           36 37 38                39 40 41
  */
 
 #include <behaviors.dtsi>
@@ -23,11 +24,17 @@
 
 #include "shared/behaviors.dtsi"
 #include "shared/core36.h"
+#include "shared/macros_combos.dtsi"
 
 / {
+    macros {
+        
+    };
+
     combos {
         compatible = "zmk,combos";
-        /* top two corners, same chord as the Silakka54 */
+
+        /* the two top corners - swaps base layout either way */
         combo_to_qwerty {
             timeout-ms = <75>;
             key-positions = <0 11>;
@@ -40,6 +47,44 @@
             bindings = <&to BASE>;
             layers = <QWE>;
         };
+
+        /* macros_combos */
+        combo_main_pw {
+            timeout-ms = <60>;
+            key-positions = <1>;
+            bindings = <&main_pw>;
+            layers = <MACRO>;
+        };
+        combo_console_pw {
+            timeout-ms = <60>;
+            key-positions = <2>;
+            bindings = <&console_pw>;
+            layers = <MACRO>;
+        };
+        combo_sudo_pw {
+            timeout-ms = <60>;
+            key-positions = <3>;
+            bindings = <&sudo_pw>;
+            layers = <MACRO>;
+        };
+        combo_admin_pw {
+            timeout-ms = <60>;
+            key-positions = <4>;
+            bindings = <&admin_pw>;
+            layers = <MACRO>;
+        };
+        combo_fms_login {
+            timeout-ms = <60>;
+            key-positions = <5>;
+            bindings = <&fms_login>;
+            layers = <MACRO>;
+        };
+        combo_cd_fix {
+            timeout-ms = <60>;
+            key-positions = <6>;
+            bindings = <&cd_fix>;
+            layers = <MACRO>;
+        };
     };
 
     keymap {
@@ -48,50 +93,60 @@
         base_layer {
             display-name = "Graphite";
             bindings = <
-&kp TAB        GR_L1     GR_R1     &kp SEMI
-&mt LCTRL ESC  GR_L2     GR_R2     &gcm
-&kp LSHFT      GR_L3     GR_R3     &kp RSHFT
-                  GR_LT  GR_RT
+&lt SYS TAB    GR_L1                                                GR_R1                        &kp SEMI
+&mt LGUI ESC   GR_L2                                                GR_R2                        &gcm
+&smart_shift   GR_L3                                                GR_R3                        &kp RSHFT
+                                     GR_LT                          GR_RT
             >;
         };
 
         qwerty_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB        QW_L1     QW_R1     &kp MINUS
-&kp LCTRL      QW_L2     QW_R2     &kp SQT
-&kp LSHFT      QW_L3     QW_R3     &kp RSHFT
-                  QW_LT  QW_RT
+&kp TAB        QW_L1                                                QW_R1                              &kp BSLH
+&mt LGUI ESC   QW_L2                                                QW_R2                              &kp APOS
+&smart_shift   QW_L3                                                QW_R3                              &kp EQUAL
+                                     QW_LT                          QW_RT
             >;
         };
 
         ext_layer {
             display-name = "Extend";
             bindings = <
-&trans   EX_L1     EX_R1     &kp DEL
-&trans   EX_L2     EX_R2     &kp GRAVE
-&trans   EX_L3     EX_R3     &trans
-            EX_LT  EX_RT
+&trans     EX_L1                                                     EX_R1                             &kp DEL
+&trans     EX_L2                                                     EX_R2                             &kp GRAVE
+&trans     EX_L3                                                     EX_R3                             &kp MINUS
+                                     EX_LT                           EX_RT
             >;
         };
 
         num_layer {
             display-name = "Num";
             bindings = <
-&trans      NU_L1     NU_R1     &trans
-&kp PSCRN   NU_L2     NU_R2     &kp C_PP
-&trans      NU_L3     NU_R3     &trans
-               NU_LT  NU_RT
+&trans     NU_L1                                                     NU_R1                              &kp F12
+&kp PSCRN  NU_L2                                                     NU_R2                              &kp C_PP
+&trans     NU_L3                                                     NU_R3                              &trans
+                                     NU_LT                           NU_RT
             >;
         };
 
         sys_layer {
             display-name = "Sys";
             bindings = <
-&sys_reset      SY_L1     SY_R1     &sys_reset
-&trans          SY_L2     SY_R2     &trans
-&studio_unlock  SY_L3     SY_R3     &studio_unlock
-                   SY_LT  SY_RT
+&sys_reset      SY_L1                                                                 SY_R1                                   &sys_reset
+&trans          SY_L2                                                                 SY_R2                                   &trans
+&studio_unlock  SY_L3                                                                 SY_R3                                   &studio_unlock
+                                                 SY_LT                                SY_RT
+            >;
+        };
+
+        mac_layer {
+            display-name = "Macros";
+            bindings = <
+&none     MA_L1                                                                       MA_R1                                   &sys_reset
+&none     MA_L2                                                                       MA_R2                                   &trans
+&none     MA_L3                                                                       MA_R3                                   &studio_unlock
+                                                 MA_LT                                MA_RT
             >;
         };
 
@@ -99,3 +154,15 @@
         extra_2 { status = "reserved"; };
     };
 };
+
+/*
+        mac_layer {
+            display-name = "Macros";
+            bindings = <
+&none     SY_L1                                                                       SY_R1                                   &sys_reset
+&none     SY_L2                                                                       SY_R2                                   &trans
+&none     SY_L3                                                                       SY_R3                                   &studio_unlock
+                                                 SY_LT                                SY_RT
+            >;
+        };
+*/
