@@ -88,7 +88,7 @@
         };
 
         /* hold: shift | tap: sticky shift | double: caps word | triple: caps lock */
-        smart_shift: smart_shift {
+        smsh: smart_shift {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;

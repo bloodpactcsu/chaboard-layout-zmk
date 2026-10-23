@@ -23,7 +23,7 @@
 #define GR_L2 &hml LGUI N &hml LALT R &hml LCTRL T &hml LSHFT S &kp G
 #define GR_R2 &kp Y &hmr RSHFT H &hmr RCTRL A &hmr RALT E &hmr RGUI I
 #define GR_L3 &kp Q &kp X &kp M &kp C &kp V
-#define GR_R3 &kp K &kp P &kp DOT & gmn & gsl
+#define GR_R3 &kp K &kp P &kp DOT &gmn &gsl
 #define GR_LT &kp LALT &mt NUM TAB &tlt EXT SPACE
 #define GR_RT &tlt EXT RET &tlt NUM BSPC &tlt MACRO DEL
 
@@ -49,46 +49,46 @@
 #define EX_R2 &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp DEL
 #define EX_L3 &kp TILDE &kp DLLR &kp PIPE &kp AMPS &kp BSLH
 #define EX_R3 &kp EQUAL &kp UNDER &kp SQT &kp DQT &kp GRAVE
-#define EX_LT &trans & trans & trans
-#define EX_RT &kp RET & trans & trans
+#define EX_LT &trans &trans &trans
+#define EX_RT &kp RET &trans &trans
 
 /* ── NUM: F-keys left, media right ────────────────────────────────────── */
 #define NU_L1 &kp F1 &kp F2 &kp F3 &kp F4 &kp F5
 #define NU_R1 &kp KP_PLUS &kp N7 &kp N8 &kp N9 &kp KP_MINUS
 #define NU_L2 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10
 #define NU_R2 &kp KP_DIVIDE &kp N4 &kp N5 &kp N6 &kp KP_MULTIPLY
-#define NU_L3 &kp F11 &kp F12 &kp PSCRN & trans & trans
+#define NU_L3 &kp F11 &kp F12 &kp PSCRN &trans &trans
 #define NU_R3 &kp N0 &kp N1 &kp N2 &kp N3 &trans
-#define NU_LT &trans & trans & trans
-#define NU_RT &trans & trans & trans
+#define NU_LT &trans &trans &trans
+#define NU_RT &trans &trans &trans
 
 /* ── SYS: reached by holding EXT + NUM together ───────────────────────── */
-#define SY_L1 &bt BT_CLR & trans & trans & trans & sys_reset
-#define SY_R1 &sys_reset & trans & trans & trans & bootloader
-#define SY_L2 &bt BT_SEL 0 & bt BT_SEL 1 & bt BT_SEL 2 & bt BT_SEL 3 & bt BT_SEL 4
-#define SY_R2 &out OUT_USB &out OUT_BLE & trans & trans &trans
-#define SY_L3 &bootloader &bt BT_CLR_ALL & trans & trans &studio_unlock
-#define SY_R3 &studio_unlock & trans & trans &bt BT_CLR_ALL &bt BT_CLR
-#define SY_LT &trans & trans & trans
-#define SY_RT &trans & trans & trans
+#define SY_L1 &bt BT_CLR &trans &trans &trans &sys_reset
+#define SY_R1 &sys_reset &trans &trans &trans &bootloader
+#define SY_L2 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
+#define SY_R2 &out OUT_USB &out OUT_BLE &trans &trans &trans
+#define SY_L3 &bootloader &bt BT_CLR_ALL &trans &trans &studio_unlock
+#define SY_R3 &studio_unlock &trans &trans &bt BT_CLR_ALL &bt BT_CLR
+#define SY_LT &trans &trans &trans
+#define SY_RT &trans &trans &trans
 
 /* ── MACRO: reached by holding MAC ───────────────────────── */
-#define MA_L1 &trans & trans & trans & trans & trans
-#define MA_R1 &trans & trans & trans & trans & trans
-#define MA_L2 &trans & trans & trans & trans & trans
-#define MA_R2 &trans & trans & trans & trans & trans
-#define MA_L3 &trans & trans & trans & trans & trans
-#define MA_R3 &trans & trans & trans & trans & trans
-#define MA_LT &trans & trans & trans
-#define MA_RT &trans & trans & trans
+#define MA_L1 &trans &trans &trans &trans &trans
+#define MA_R1 &trans &trans &trans &trans &trans
+#define MA_L2 &trans &trans &trans &trans &trans
+#define MA_R2 &trans &trans &trans &trans &trans
+#define MA_L3 &trans &trans &trans &trans &trans
+#define MA_R3 &trans &trans &trans &trans &trans
+#define MA_LT &trans &trans &trans
+#define MA_RT &trans &trans &trans
 
 /* ── UTIL: reached by holding ??? ───────────────────────── */
-#define UT_L1 &trans & trans & trans & trans & trans
-#define UT_R1 &trans & trans & trans & trans & trans
-#define UT_L2 &trans & trans & trans & trans & trans
-#define UT_L2 &trans & trans & trans & trans & trans
-#define UT_R2 &trans & trans & trans & trans & trans
-#define UT_L3 &trans & trans & trans & trans & trans
-#define UT_R3 &trans & trans & trans & trans & trans
-#define UT_LT &trans & trans & trans
-#define UT_RT &trans & trans & trans
+#define UT_L1 &trans &trans &trans &trans &trans
+#define UT_R1 &trans &trans &trans &trans &trans
+#define UT_L2 &trans &trans &trans &trans &trans
+#define UT_L2 &trans &trans &trans &trans &trans
+#define UT_R2 &trans &trans &trans &trans &trans
+#define UT_L3 &trans &trans &trans &trans &trans
+#define UT_R3 &trans &trans &trans &trans &trans
+#define UT_LT &trans &trans &trans
+#define UT_RT &trans &trans &trans
