@@ -24,7 +24,7 @@
 #define GR_R2 &kp Y &hmr RSHFT H &hmr RCTRL A &hmr RALT E &hmr RGUI I
 #define GR_L3 &kp Q &kp X &kp M &kp C &kp V
 #define GR_R3 &kp K &kp P &kp DOT &gmn &gsl
-#define GR_LT &kp LALT &mt NUM TAB &tlt EXT SPACE
+#define GR_LT &kp LALT &tlt NUM TAB &tlt EXT SPACE
 #define GR_RT &tlt EXT RET &tlt NUM BSPC &tlt MACRO DEL
 
 /* ── QWERTY: gaming / fallback ─────────────────────────────────────────
