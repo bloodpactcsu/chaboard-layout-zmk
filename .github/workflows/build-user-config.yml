@@ -60,10 +60,10 @@ jobs:
 
       - name: Write private macros
         env:
-          MACROS_COMBOS_DTSI: ${{ secrets.MACROS_COMBOS_DTSI }}
+          MACROS_COMBOS_DTSI: ${{ secrets.MACROS_SECRETS_DTSI }}
         run: |
           if [ -n "$MACROS_COMBOS_DTSI" ]; then
-            printf '%s\n' "$MACROS_COMBOS_DTSI" > "${{ inputs.config_path }}/shared/macros_combos.dtsi"
+            printf '%s\n' "$MACROS_COMBOS_DTSI" > "${{ inputs.config_path }}/shared/secrets.dtsi"
             echo "Private macros written"
           else
             echo "::warning::MACROS_COMBOS_DTSI not set - building with placeholder macros"
