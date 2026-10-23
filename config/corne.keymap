@@ -93,7 +93,7 @@
         base_layer {
             display-name = "Graphite";
             bindings = <
-&lt SYS TAB    GR_L1                                                GR_R1                        &kp SEMI
+&lt UTIL TAB   GR_L1                                                GR_R1                        &kp SEMI
 &mt LGUI ESC   GR_L2                                                GR_R2                        &gcm
 &smsh          GR_L3                                                GR_R3                        &kp RSHFT
                                      GR_LT                          GR_RT
@@ -103,7 +103,7 @@
         qwerty_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB        QW_L1                                                QW_R1                              &kp BSLH
+&lt UTIL TAB   QW_L1                                                QW_R1                              &kp BSLH
 &mt LGUI ESC   QW_L2                                                QW_R2                              &kp APOS
 &smsh          QW_L3                                                QW_R3                              &kp EQUAL
                                      QW_LT                          QW_RT
